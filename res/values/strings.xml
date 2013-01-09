@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="edit_message">Testing Intent</string>
+    <string name="greeting">Spiking Apps</string>
+    <string name="send">Send</string>
+    <string name="activity_display_message">My Message</string>
+    <string name="camera">Start Camera</string>
+    <string name="take_picture">Snap</string>
+</resources>

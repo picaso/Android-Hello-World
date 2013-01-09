@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:clickable="false"
+
+        >
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/greeting"
+            />
+    <TableRow>
+
+    <EditText android:id="@+id/edit_message"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="@string/edit_message" />
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:id="@+id/button"
+            android:onClick="sendMessage"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/camera"
+                android:id="@+id/start_camera"
+                android:onClick="startCamera"/>
+    </TableRow>
+    <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_gravity="top">
+
+
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button1"
+                android:background="@drawable/custom_buttons"
+                android:onClick="startCustomView" android:layout_column="0" android:contentDescription="Button"/>
+
+    </TableRow>
+</TableLayout>
+
