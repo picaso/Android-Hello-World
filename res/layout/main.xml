@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content" android:clickable="false"
+             android:orientation="vertical"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" android:clickable="false"
 
         >
 
@@ -13,16 +13,16 @@
             />
     <TableRow>
 
-    <EditText android:id="@+id/edit_message"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:hint="@string/edit_message" />
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send"
-            android:id="@+id/button"
-            android:onClick="sendMessage"/>
+        <EditText android:id="@+id/edit_message"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="@string/edit_message"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:id="@+id/button"
+                android:onClick="sendMessage"/>
     </TableRow>
 
     <TableRow>

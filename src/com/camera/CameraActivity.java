@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import com.helloworld.R;
+import com.parse.Parse;
+import com.parse.ParseObject;
 
 public class CameraActivity extends Activity implements  Camera.PictureCallback{
 	private Button shutterButton;
@@ -16,7 +18,8 @@ public class CameraActivity extends Activity implements  Camera.PictureCallback{
 	@Override
 	public  void onCreate(Bundle b){
 		super.onCreate(b);
-		setContentView(R.layout.camera);
+        Parse.initialize(this, "38faGNV3UuHWiepxRkL3u0ofx80BXVFGSF2S2E2v", "ETLJ7Lcujc9m2Eq0CE9cb8ldDqEwgu2vTaKdHnCs");
+        setContentView(R.layout.camera);
 		cameraPreview = new CameraPreview(this);
 		RelativeLayout preview = (RelativeLayout) findViewById(R.id.camera);
 		preview.addView(cameraPreview);
@@ -32,6 +35,9 @@ public class CameraActivity extends Activity implements  Camera.PictureCallback{
 	@Override
 	public void onPictureTaken(byte[] data, Camera camera) {
 		camera.startPreview();
+        ParseObject testObject = new ParseObject("TestObject");
+        testObject.put("pic", data);
+        testObject.saveInBackground();
 		shutterButton.setEnabled(true);
 	}
 
